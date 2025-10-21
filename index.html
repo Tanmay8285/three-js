@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+  </head>
+  <body>
+    <div class="main w-full min-h-screen relative">
+      <nav class="fixed top-6 left-0 px-10 py-3 flex items-center justify-between z-50 w-full">
+        <!-- Logo on the left -->
+        <div class="flex items-center">
+          <img  
+            src="https://preview.redd.it/3d-rendered-the-cyberpunk-logo-using-blender-v0-khopj82wqee91.png?width=1080&crop=smart&auto=webp&s=0e62e74ba8b5ef6191228e855079491cfa56f57b" 
+            alt="logo"
+            class="object-contain mix-blend-lighten opacity-90 drop-shadow-[0_2px_10px_rgba(0,255,255,0.7)] w-[200px] md:w-[200px] lg:w-[180px] max-w-none p-4"
+          > 
+        </div>
+        <!-- Links on the right -->
+        <div class="flex gap-10 items-center">
+          <a href="#" class="text-white font-bold hover:text-blue-500 transition">Home</a>
+          <a href="#features" class="text-white font-bold hover:text-blue-500 transition">Features</a>
+          <a href="#about" class="text-white font-bold hover:text-blue-500 transition">About</a>
+          <a href="#contact" class="text-white font-bold hover:text-blue-500 transition">Contact</a>
+        </div>
+      </nav>
+      <!-- Blue circle behind canvas -->
+      <div 
+        style="
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+          border-radius: 50%;
+          width: 35rem;
+          height: 50rem;
+          background-color: rgba(6, 39, 149, 0.6); /* bg-blue-800/60 */
+          filter: blur(90px);
+          box-shadow: 0 0 64px 32px rgba(0,153,255,0.2);
+          border: 4px solid rgba(96, 165, 250, 0.2); /* border-blue-400/20 */
+       
+          pointer-events: none;
+        ">
+      </div>
+      <!-- Canvas on top -->
+      <canvas id="draw" class="absolute top-0 left-0 z-20 w-full h-full"></canvas>
+      <img class="absolute w-[1000px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-screen filter saturate-200 contrast-200 z-40"
+       src="https://preview.redd.it/3d-rendered-the-cyberpunk-logo-using-blender-v0-khopj82wqee91.png?width=1080&crop=smart&auto=webp&s=0e62e74ba8b5ef6191228e855079491cfa56f57b" alt="">
+    </div>
+    
+    <!-- New Section - Page 2 -->
+    <section id="features" class="w-full min-h-screen bg-gradient-to-b from-black to-gray-900 relative flex items-center justify-center">
+      <div class="text-center text-white z-30 max-w-4xl px-8">
+        <h2 class="text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          Features
+        </h2>
+        <p class="text-xl mb-12 text-gray-300">
+          Discover the amazing features of our Three.js powered application
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-blue-500/20">
+            <h3 class="text-2xl font-bold mb-4 text-blue-400">3D Models</h3>
+            <p class="text-gray-300">Interactive 3D models with smooth animations</p>
+          </div>
+          <div class="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-blue-500/20">
+            <h3 class="text-2xl font-bold mb-4 text-purple-400">Real-time Effects</h3>
+            <p class="text-gray-300">Dynamic lighting and post-processing effects</p>
+          </div>
+          <div class="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-blue-500/20">
+            <h3 class="text-2xl font-bold mb-4 text-green-400">Responsive Design</h3>
+            <p class="text-gray-300">Works perfectly on all devices and screen sizes</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Background glow for section 2 -->
+      <div 
+        style="
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+          border-radius: 50%;
+          width: 20rem;
+          height: 35rem;
+          background-color: rgba(147, 51, 234, 0.3);
+          filter: blur(100px);
+          box-shadow: 0 0 80px 40px rgba(147, 51, 234, 0.1);
+          pointer-events: none;
+        ">
+      </div>
+    </section>
+    
+    <!-- New Section - Page 3 -->
+    <section id="about" class="w-full min-h-screen bg-gradient-to-b from-gray-900 to-black relative flex items-center justify-center">
+      <div class="text-center text-white z-30 max-w-4xl px-8">
+        <h2 class="text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+          About Us
+        </h2>
+        <p class="text-xl mb-12 text-gray-300">
+          We create immersive web experiences using cutting-edge 3D technology
+        </p>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="text-left">
+            <h3 class="text-3xl font-bold mb-6 text-green-400">Our Mission</h3>
+            <p class="text-lg text-gray-300 mb-4">
+              To push the boundaries of web development by creating stunning 3D experiences 
+              that engage and inspire users.
+            </p>
+            <p class="text-lg text-gray-300">
+              Using Three.js, WebGL, and modern web technologies to bring your ideas to life.
+            </p>
+          </div>
+          <div class="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20">
+            <h4 class="text-2xl font-bold mb-4 text-green-400">Technologies Used</h4>
+            <ul class="space-y-2 text-gray-300">
+              <li>• Three.js for 3D graphics</li>
+              <li>• WebGL for hardware acceleration</li>
+              <li>• GSAP for smooth animations</li>
+              <li>• Tailwind CSS for styling</li>
+              <li>• Vite for fast development</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Background glow for section 3 -->
+      <div 
+        style="
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+          border-radius: 50%;
+          width: 34rem;
+          height: 34rem;
+          background-color: rgba(34, 197, 94, 0.2);
+          filter: blur(120px);
+          box-shadow: 0 0 60px 30px rgba(34, 197, 94, 0.1);
+          pointer-events: none;
+        ">
+      </div>
+    </section>
+    
+    <!-- New Page Section - Contact -->
+    <section id="contact" class="w-full min-h-screen bg-gradient-to-b from-black to-blue-900 relative flex items-center justify-center">
+      <div class="text-center text-white z-30 max-w-4xl px-8">
+        <h2 class="text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          Contact Us
+        </h2>
+        <p class="text-xl mb-12 text-gray-300">
+          Get in touch with us for your next 3D web project
+        </p>
+        
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- Contact Form -->
+          <div class="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">
+            <h3 class="text-2xl font-bold mb-6 text-cyan-400">Send us a Message</h3>
+            <form class="space-y-4">
+              <div>
+                <input type="text" placeholder="Your Name" 
+                       class="w-full p-3 bg-gray-700/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none">
+              </div>
+              <div>
+                <input type="email" placeholder="Your Email" 
+                       class="w-full p-3 bg-gray-700/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none">
+              </div>
+              <div>
+                <textarea placeholder="Your Message" rows="4"
+                          class="w-full p-3 bg-gray-700/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none"></textarea>
+              </div>
+              <button type="submit" 
+                      class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+                Send Message
+              </button>
+            </form>
+          </div>
+          
+          <!-- Contact Info -->
+          <div class="space-y-8">
+            <div class="bg-gray-800/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
+              <h4 class="text-xl font-bold mb-4 text-cyan-400">Email</h4>
+              <p class="text-gray-300">contact@threejs-project.com</p>
+            </div>
+            <div class="bg-gray-800/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
+              <h4 class="text-xl font-bold mb-4 text-cyan-400">Phone</h4>
+              <p class="text-gray-300">+1 (555) 123-4567</p>
+            </div>
+            <div class="bg-gray-800/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
+              <h4 class="text-xl font-bold mb-4 text-cyan-400">Location</h4>
+              <p class="text-gray-300">San Francisco, CA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Background glow for contact section -->
+      <div 
+        style="
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+          border-radius: 50%;
+          width: 45rem;
+          height: 45rem;
+          background-color: rgba(6, 182, 212, 0.2);
+          filter: blur(150px);
+          box-shadow: 0 0 100px 50px rgba(6, 182, 212, 0.1);
+          pointer-events: none;
+        ">
+      </div>
+    </section>
+    
+    <!-- Empty New Page Section -->
+    <section class="w-full min-h-screen bg-gradient-to-b from-blue-900 to-black relative flex items-center justify-center">
+      <div class="text-center text-white z-30">
+        <h2 class="text-6xl font-bold mb-8 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+          New Page
+        </h2>
+        <p class="text-xl text-gray-400">
+          This is an empty page section ready for your content
+        </p>
+      </div>
+      
+      <!-- Background glow for new page -->
+      <div 
+        style="
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+          border-radius: 50%;
+          width: 30rem;
+          height: 30rem;
+          background-color: rgba(255, 255, 255, 0.1);
+          filter: blur(120px);
+          box-shadow: 0 0 80px 40px rgba(255, 255, 255, 0.05);
+          pointer-events: none;
+        ">
+      </div>
+    </section>
+    
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
